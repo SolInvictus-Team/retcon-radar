@@ -1,0 +1,25 @@
+{
+  "id": "proj_34926510",
+  "title": "Ripple Test Project",
+  "chapters": [
+    {
+      "id": "scene_ed5402",
+      "index": 1,
+      "title": "Scene 1",
+      "text": "Bob loses the key."
+    },
+    {
+      "id": "scene_2b05ba",
+      "index": 2,
+      "title": "Scene 2",
+      "text": "Bob uses the key."
+    }
+  ],
+  "lore": {
+    "characters": [],
+    "items": [],
+    "rules": []
+  },
+  "created_at": "2026-11-15T17:07:56.883647+00:00",
+  "updated_at": "2026-11-15T17:07:56.887582+00:00"
+}

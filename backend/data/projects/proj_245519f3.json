@@ -1,0 +1,53 @@
+{
+  "id": "proj_245519f3",
+  "title": "The Lighthouse Keeper",
+  "chapters": [
+    {
+      "id": "scene_1914dc",
+      "index": 1,
+      "title": "Scene 1: The Watch",
+      "text": "Thomas inspected the brass lantern at dusk. Ephraim climbed the spiral stairs slowly."
+    },
+    {
+      "id": "scene_da89e4",
+      "index": 2,
+      "title": "Scene 2: The Gale",
+      "text": "A gale struck the lighthouse tower. A falling iron beam shattered Thomas's left arm."
+    }
+  ],
+  "lore": {
+    "characters": [
+      {
+        "id": "char_thomas",
+        "name": "Thomas",
+        "aliases": [],
+        "traits": {},
+        "description": null
+      },
+      {
+        "id": "char_ephraim",
+        "name": "Ephraim",
+        "aliases": [],
+        "traits": {},
+        "description": null
+      }
+    ],
+    "items": [
+      {
+        "id": "item_brass_lantern",
+        "name": "brass lantern",
+        "aliases": [],
+        "description": null
+      },
+      {
+        "id": "item_iron_beam",
+        "name": "iron beam",
+        "aliases": [],
+        "description": null
+      }
+    ],
+    "rules": []
+  },
+  "created_at": "2026-11-15T17:24:46.878806+00:00",
+  "updated_at": "2026-11-15T18:08:24.467307+00:00"
+}

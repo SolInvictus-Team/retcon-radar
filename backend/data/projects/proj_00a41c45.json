@@ -1,0 +1,25 @@
+{
+  "id": "proj_00a41c45",
+  "title": "Continuity Test Project",
+  "chapters": [
+    {
+      "id": "scene_cf8bb5",
+      "index": 1,
+      "title": "Scene 1",
+      "text": "Alice suffers a severe arm injury."
+    },
+    {
+      "id": "scene_630662",
+      "index": 2,
+      "title": "Scene 2",
+      "text": "Alice uses her arm heavily."
+    }
+  ],
+  "lore": {
+    "characters": [],
+    "items": [],
+    "rules": []
+  },
+  "created_at": "2026-11-15T17:07:56.867790+00:00",
+  "updated_at": "2026-11-15T17:07:56.876721+00:00"
+}

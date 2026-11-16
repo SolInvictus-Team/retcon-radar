@@ -1,0 +1,111 @@
+{
+  "id": "courier-protocol",
+  "title": "The Courier Protocol",
+  "chapters": [
+    {
+      "id": "scene_1",
+      "index": 1,
+      "title": "Scene 1: The Briefing",
+      "text": "Kabir checked his gear at the safehouse. Meera held her grandmother's bronze key tightly in her hand."
+    },
+    {
+      "id": "scene_2",
+      "index": 2,
+      "title": "Scene 2: Ambush at the Rail yard",
+      "text": "Gunfire erupted across the freight yard. A stray bullet shattered Kabir's right shoulder."
+    },
+    {
+      "id": "scene_3",
+      "index": 3,
+      "title": "Scene 3: The Exchange",
+      "text": "Desperate for medical supplies, Meera pawned the bronze key to a fence."
+    },
+    {
+      "id": "scene_4",
+      "index": 4,
+      "title": "Scene 4: The Infirmary",
+      "text": "Dr. Sen treated the wounded refugees quietly. He was a devout physician who abhorred violence."
+    },
+    {
+      "id": "scene_5",
+      "index": 5,
+      "title": "Scene 5: The Sniper's Perch",
+      "text": "Kabir climbed the water tower. Through blinding agony, he forced his damaged shoulder to steady the weight, knowing it would tear further."
+    }
+  ],
+  "lore": {
+    "characters": [
+      {
+        "id": "char_kabir",
+        "name": "Kabir",
+        "aliases": [
+          "Kabir Sharma",
+          "The Courier"
+        ],
+        "traits": {
+          "determined": true
+        },
+        "description": "A seasoned courier navigating the contested sector."
+      },
+      {
+        "id": "char_meera",
+        "name": "Meera",
+        "aliases": [
+          "Meera Rao"
+        ],
+        "traits": {
+          "resourceful": true
+        },
+        "description": "An archivist seeking the forgotten vault."
+      },
+      {
+        "id": "char_sen",
+        "name": "Dr. Sen",
+        "aliases": [
+          "Doctor Sen",
+          "Sen"
+        ],
+        "traits": {
+          "non_violent": true,
+          "peaceful": true
+        },
+        "description": "A field medic bound by vows of non-violence."
+      }
+    ],
+    "items": [
+      {
+        "id": "item_bronze_key",
+        "name": "bronze key",
+        "aliases": [
+          "grandmother's key",
+          "the key"
+        ],
+        "description": "An antique bronze key opening the archives vault."
+      },
+      {
+        "id": "item_sniper_rifle",
+        "name": "sniper rifle",
+        "aliases": [
+          "the rifle"
+        ],
+        "description": "A heavy long-range sniper rifle."
+      },
+      {
+        "id": "item_gear",
+        "name": "gear",
+        "aliases": [],
+        "description": null
+      }
+    ],
+    "rules": [
+      {
+        "id": "rule_physical",
+        "name": "Physical Invariants",
+        "description": "Injured limbs cannot sustain heavy load without healing.",
+        "enabled": true
+      }
+    ]
+  },
+  "created_at": null,
+  "updated_at": "2026-11-16T17:19:27.496101+00:00"
+}

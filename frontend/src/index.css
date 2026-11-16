@@ -1,0 +1,346 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #25282c;
+  --muted: #62665f;
+  --faint: #92948a;
+  --accent: #2a4559;
+  --ok: #3d7a5c;
+  --conflict: #b8402f;
+  --bg: #f4f2ec;
+  --bg-gradient-1: #ece8dd;
+  --bg-gradient-2: #e3e9e6;
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.9);
+  --sheet-bg: #fffefb;
+}
+
+@layer base {
+  body {
+    background-color: #f4f2ec;
+    background-image: 
+      radial-gradient(at 0% 0%, #ece8dd 0px, transparent 55%),
+      radial-gradient(at 100% 100%, #e3e9e6 0px, transparent 55%);
+    background-attachment: fixed;
+    color: #25282c;
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+}
+
+/* Glass panel, card, and control utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px -2px rgba(37, 40, 44, 0.05), 0 2px 6px -1px rgba(37, 40, 44, 0.03);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 16px -2px rgba(37, 40, 44, 0.04), 0 2px 4px -1px rgba(37, 40, 44, 0.02);
+}
+
+.glass-control {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+/* Screenplay sheet */
+.screenplay-sheet {
+  background-color: #fffefb !important;
+  box-shadow: 0 10px 30px -4px rgba(37, 40, 44, 0.08), 0 4px 12px -2px rgba(37, 40, 44, 0.04);
+  border: 1px solid rgba(37, 40, 44, 0.06);
+}
+
+/* Screenplay page font & styling */
+.screenplay-font {
+  font-family: 'Courier Prime', Courier, monospace;
+}
+
+/* Sentence with a conflict: red wavy underline plus a very faint red background */
+.conflict-underline {
+  text-decoration: underline wavy #b8402f 1.5px !important;
+  text-underline-offset: 4px !important;
+  cursor: pointer;
+  background-color: rgba(184, 64, 47, 0.08) !important;
+  border-radius: 4px;
+  padding: 1px 3px;
+  transition: background-color 150ms ease, box-shadow 150ms ease;
+  outline: none;
+}
+
+.conflict-underline:hover,
+.conflict-underline:focus-visible {
+  background-color: rgba(184, 64, 47, 0.16) !important;
+  box-shadow: 0 0 0 2px rgba(184, 64, 47, 0.35);
+}
+
+.conflict-underline.conflict-active {
+  background-color: rgba(184, 64, 47, 0.22) !important;
+  box-shadow: 0 0 0 2px rgba(184, 64, 47, 0.45);
+}
+
+/* Source sentence highlight when jumped to source */
+.source-sentence-highlight {
+  background-color: rgba(42, 69, 89, 0.15) !important;
+  border-bottom: 2px solid #2a4559 !important;
+  border-radius: 4px;
+  padding: 1px 3px;
+  animation: pulse-source 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-source {
+  0%, 100% { background-color: rgba(42, 69, 89, 0.15); }
+  50% { background-color: rgba(42, 69, 89, 0.28); }
+}
+
+/* Smooth 200ms slide-in animation */
+.slide-in-200 {
+  animation: slideInRight 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* CodeMirror 6 custom styles for writer studio */
+.cm-editor {
+  height: 100%;
+  font-family: 'Courier Prime', Courier, monospace !important;
+  font-size: 19.5px !important;
+  line-height: 1.95 !important;
+  color: #25282c !important;
+  background-color: #fffefb !important;
+}
+
+.cm-scroller {
+  overflow: auto;
+  padding: 2.25rem 2.5rem;
+  font-family: 'Courier Prime', Courier, monospace !important;
+}
+
+.cm-content {
+  caret-color: #2a4559;
+}
+
+.cm-focused {
+  outline: none !important;
+}
+
+.cm-line {
+  padding: 0 0.25rem;
+}
+
+.cm-selectionBackground,
+.cm-focused .cm-selectionBackground {
+  background-color: rgba(42, 69, 89, 0.12) !important;
+}
+
+/* Faint Graph Grid */
+.graph-grid-bg {
+  background-image: radial-gradient(#b3b5aa 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(146, 148, 138, 0.35);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(98, 102, 95, 0.6);
+}
+
+/* Page fade transition between routes */
+.page-fade-in {
+  animation: pageFadeIn 250ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scroll reveal utilities */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms cubic-bezier(0.16, 1, 0.3, 1), transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-80 { transition-delay: 80ms; }
+.delay-160 { transition-delay: 160ms; }
+.delay-240 { transition-delay: 240ms; }
+.delay-320 { transition-delay: 320ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-480 { transition-delay: 480ms; }
+
+/* Subtle floating graph node keyframes */
+@keyframes floatNode1 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(6px, -12px, 0); }
+}
+
+@keyframes floatNode2 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-8px, 10px, 0); }
+}
+
+@keyframes floatNode3 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(10px, 8px, 0); }
+}
+
+@keyframes floatNode4 {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-6px, -10px, 0); }
+}
+
+.animate-float-1 { animation: floatNode1 7s ease-in-out infinite; }
+.animate-float-2 { animation: floatNode2 8.5s ease-in-out infinite; }
+.animate-float-3 { animation: floatNode3 9.2s ease-in-out infinite; }
+.animate-float-4 { animation: floatNode4 7.8s ease-in-out infinite; }
+
+/* Animated connecting dashed line */
+@keyframes dashFlow {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.animate-dash-flow {
+  animation: dashFlow 2s linear infinite;
+}
+
+/* Red Pen Wavy Underline Draw */
+@keyframes drawWavyUnderline {
+  from {
+    stroke-dashoffset: 160;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-draw-wavy {
+  stroke-dasharray: 160;
+  stroke-dashoffset: 160;
+  animation: drawWavyUnderline 900ms cubic-bezier(0.16, 1, 0.3, 1) forwards 600ms;
+}
+
+/* Infinite Marquee strip */
+@keyframes marqueeScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Soft hero mesh gradient drift */
+@keyframes meshDrift {
+  0%, 100% {
+    background-position: 0% 50%, 100% 50%, 50% 0%;
+  }
+  50% {
+    background-position: 100% 50%, 0% 50%, 50% 100%;
+  }
+}
+
+.hero-mesh-bg {
+  background-image: 
+    radial-gradient(at 15% 20%, #ece8dd 0px, transparent 50%),
+    radial-gradient(at 85% 25%, #e3e9e6 0px, transparent 50%),
+    radial-gradient(at 50% 85%, #dce4e8 0px, transparent 55%);
+  background-size: 140% 140%;
+  animation: meshDrift 20s ease-in-out infinite alternate;
+}
+
+/* Subtle animated border gradient for final CTA button */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 1px rgba(42, 69, 89, 0.2), 0 4px 16px -2px rgba(42, 69, 89, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 0 2px rgba(42, 69, 89, 0.45), 0 6px 24px -2px rgba(42, 69, 89, 0.35);
+  }
+}
+
+.cta-button-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-float-1,
+  .animate-float-2,
+  .animate-float-3,
+  .animate-float-4,
+  .animate-dash-flow,
+  .animate-draw-wavy,
+  .animate-marquee,
+  .hero-mesh-bg,
+  .cta-button-glow {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
